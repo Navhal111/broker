@@ -82,7 +82,7 @@ class _BottomBarScreenState extends State<BottomBarScreen> with SingleTickerProv
                   children: [
                     Image.asset(_icons[i], height: 25,width: 25,fit: BoxFit.contain, color: i == _selectedIndex ? Theme.of(context).primaryColor : Colors.grey,),
                     SizedBox(height: 6),
-                    Text(_name[i], style: poppinsMedium.copyWith(color: i == _selectedIndex ? Theme.of(context).primaryColor : Colors.grey, fontSize: 12),)
+                    Text(_name[i], style: poppinsMedium.copyWith(color: i == _selectedIndex ? Theme.of(context).primaryColor : Colors.grey, fontSize: 10),)
                   ],
                 ),
             ],
