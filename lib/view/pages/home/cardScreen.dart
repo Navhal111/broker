@@ -19,7 +19,8 @@ class CarsScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
               child: Card(
                 color: Colors.white,
-                elevation: 2,
+                surfaceTintColor: Colors.white,
+                shadowColor: Colors.grey.shade400,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20)
                 ),
@@ -39,7 +40,7 @@ class CarsScreen extends StatelessWidget {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Image.asset(Images.host_flat_start, height: 20,),
-                              Text("Top host", style: poppinsSemiBold.copyWith(fontSize: 12, color: Colors.black),),
+                              Text("topHost".tr, style: poppinsSemiBold.copyWith(fontSize: 12, color: Colors.black),),
                             ],
                           ),
                         ),
@@ -73,7 +74,7 @@ class CarsScreen extends StatelessWidget {
                               Text("    5.0 | 10 Trips", style: poppinsMedium.copyWith(color: Colors.grey.shade600, fontSize: 10)),
                               Spacer(),
                               Text("\$999/", style: poppinsSemiBold.copyWith(color: Colors.black)),
-                              Text("day", style: poppinsSemiBold.copyWith(color: Colors.grey.shade600)),
+                              Text("day".tr, style: poppinsSemiBold.copyWith(color: Colors.grey.shade600)),
                             ],
                           ),
                           Row(

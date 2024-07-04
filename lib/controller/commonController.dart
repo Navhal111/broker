@@ -14,7 +14,7 @@ class CommonController extends GetxController implements GetxService {
   });
 
 
-  int indexTap = 0;
+  int indexTap = 1;
   indexChange(int value){
     indexTap = value;
     update();

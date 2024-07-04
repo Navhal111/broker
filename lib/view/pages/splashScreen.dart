@@ -21,13 +21,13 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(
-      Duration(seconds: 1),
-          () {
-        Get.offNamed(RouteHelper.getBottomBarScreen());
-      },
-    );
+
+    Timer(const Duration(seconds: 1), () => Get.offNamed(RouteHelper.getBottomBarScreen()));
+
   }
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,6 +36,5 @@ class _SplashScreenState extends State<SplashScreen> {
         )
     );
   }
-
 
 }

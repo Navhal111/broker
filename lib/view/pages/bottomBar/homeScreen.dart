@@ -50,7 +50,7 @@ class HomeScreen extends StatelessWidget {
                                         children: <Widget>[
                                           AppBar(
                                             leading: IconButton(onPressed: () =>Get.back(), icon: Icon(Icons.close)),
-                                            title: Text("Where?", style: poppinsSemiBold.copyWith(fontSize: 16)),
+                                            title: Text("Where".tr, style: poppinsSemiBold.copyWith(fontSize: 16)),
                                             centerTitle: true,
                                           ),
                                           Divider(color: Colors.grey.shade300),
@@ -59,7 +59,7 @@ class HomeScreen extends StatelessWidget {
                                             child: TextField(
                                               decoration: InputDecoration(
                                                 isDense: true,
-                                                hintText: "City, zip code, address, airport or hotel...",
+                                                hintText: "citySerach".tr,
                                                 hintStyle: TextStyle(fontSize: 14),
                                                 prefixIcon: Padding(
                                                   padding: const EdgeInsets.all(12.0),
@@ -86,7 +86,7 @@ class HomeScreen extends StatelessWidget {
                                                   child: Row(
                                                     children: [
                                                       Image.asset(Images.location_flat, height: 20),
-                                                      Text("     Current Location", style: poppinsSemiBold.copyWith())
+                                                      Text("     ${"currentLocation".tr}", style: poppinsSemiBold.copyWith())
                                                     ],
                                                   ),
                                                 ),
@@ -97,7 +97,7 @@ class HomeScreen extends StatelessWidget {
                                                   child: Row(
                                                     children: [
                                                       Image.asset(Images.location_flat, height: 20),
-                                                      Text("     Los Angeles, CA", style: poppinsSemiBold.copyWith())
+                                                      Text("     ${"losAngeles".tr}", style: poppinsSemiBold.copyWith())
                                                     ],
                                                   ),
                                                 ),
@@ -108,7 +108,7 @@ class HomeScreen extends StatelessWidget {
                                                   child: Row(
                                                     children: [
                                                       Image.asset(Images.location_flat, height: 20),
-                                                      Text("     San Francisco, CA", style: poppinsSemiBold.copyWith())
+                                                      Text("     ${"sanFrancisco".tr}", style: poppinsSemiBold.copyWith())
                                                     ],
                                                   ),
                                                 ),
@@ -142,7 +142,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 Expanded(
                   child: DefaultTabController(
-                    initialIndex: 0,
+                    initialIndex: 1,
                     length: 3,
                     child: Scaffold(
                       appBar: AppBar(
@@ -156,15 +156,15 @@ class HomeScreen extends StatelessWidget {
                           unselectedLabelColor: Colors.grey,
                           tabs: <Widget>[
                             Tab(
-                              text: 'Boats',
+                              text: 'Boats'.tr,
                               icon: Image.asset(Images.boat_flat, height: 25, color: commonController.indexTap == 0 ? Theme.of(context).primaryColor : Theme.of(context).secondaryHeaderColor),
                             ),
                             Tab(
-                              text: 'Cars',
+                              text: 'Cars'.tr,
                               icon: Image.asset(Images.car_flat, height: 25, color: commonController.indexTap == 1 ? Theme.of(context).primaryColor : Theme.of(context).secondaryHeaderColor),
                             ),
                             Tab(
-                              text: 'Stays',
+                              text: 'Stays'.tr,
                               icon: Image.asset(Images.house_flat, height: 25, color: commonController.indexTap == 2 ? Theme.of(context).primaryColor : Theme.of(context).secondaryHeaderColor),
                             ),
                           ],
@@ -180,7 +180,7 @@ class HomeScreen extends StatelessWidget {
                                   padding: const EdgeInsets.all(30.0),
                                   child: Image.asset(Images.empty_result),
                                 ),
-                                Text("Try changing or removing some of your filters or adjusting your search location.", textAlign: TextAlign.center),
+                                Text("tryChangeLocation".tr, textAlign: TextAlign.center),
                                 SizedBox(height: Get.height*0.1),
                                 Container(
                                   decoration: BoxDecoration(
@@ -188,7 +188,7 @@ class HomeScreen extends StatelessWidget {
                                       color: Theme.of(context).primaryColor
                                   ),
                                   padding: EdgeInsets.symmetric(horizontal: 10,vertical: 6),
-                                  child: Text("Clear all filters", style: TextStyle(fontSize: 12, color: Colors.white),),
+                                  child: Text("clearAllFilters".tr, style: TextStyle(fontSize: 12, color: Colors.white),),
                                 )
                               ],
                             ),
@@ -202,15 +202,15 @@ class HomeScreen extends StatelessWidget {
                                   padding: const EdgeInsets.all(30.0),
                                   child: Image.asset(Images.empty_result),
                                 ),
-                                Text("Try changing or removing some of your filters or adjusting your search location.", textAlign: TextAlign.center),
+                                Text("tryChangeLocation".tr, textAlign: TextAlign.center),
                                 SizedBox(height: Get.height*0.1),
                                 Container(
                                   decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(6),
-                                    color: Theme.of(context).primaryColor
+                                      borderRadius: BorderRadius.circular(6),
+                                      color: Theme.of(context).primaryColor
                                   ),
                                   padding: EdgeInsets.symmetric(horizontal: 10,vertical: 6),
-                                  child: Text("Clear all filters", style: TextStyle(fontSize: 12, color: Colors.white),),
+                                  child: Text("clearAllFilters".tr, style: TextStyle(fontSize: 12, color: Colors.white),),
                                 )
                               ],
                             ),
@@ -230,4 +230,3 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-//
