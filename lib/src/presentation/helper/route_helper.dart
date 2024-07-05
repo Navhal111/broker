@@ -1,11 +1,6 @@
-
+import 'package:broker/src/presentation/pages/bottomBar/bottomBarScreen.dart';
+import 'package:broker/src/presentation/pages/spalshScreen/splashScreen.dart';
 import 'package:get/get.dart';
-
-import '../view/pages/bottomBar/bottomBarScreen.dart';
-import '../view/pages/splashScreen.dart';
-
-
-
 
 class RouteHelper {
   static const String splash = '/splash';
@@ -18,6 +13,5 @@ class RouteHelper {
   static List<GetPage> routes = [
     GetPage(name: splash, page: () => SplashScreen()),
     GetPage(name: bottomBarScreen, page: () => BottomBarScreen()),
-
   ];
 }

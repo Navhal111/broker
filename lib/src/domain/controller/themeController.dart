@@ -1,12 +1,7 @@
 import 'dart:ui';
-
+import 'package:broker/src/domain/entity/utils/string.dart';
 import 'package:get/get.dart';
-
 import 'package:shared_preferences/shared_preferences.dart';
-
-import '../constants/constant_apis.dart';
-import '../utils/string.dart';
-
 
 class ThemeController extends GetxController implements GetxService {
   final SharedPreferences sharedPreferences;
@@ -28,7 +23,6 @@ class ThemeController extends GetxController implements GetxService {
     _darkTheme = sharedPreferences.getBool(Strings.THEME) ?? false;
     update();
   }
-
 
   String _language = "US";
   String get language => _language;

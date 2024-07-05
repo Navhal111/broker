@@ -1,12 +1,12 @@
+import 'package:broker/src/domain/controller/themeController.dart';
+import 'package:broker/src/domain/entity/utils/string.dart';
+import 'package:broker/src/presentation/helper/route_helper.dart';
+import 'package:broker/src/presentation/theme/dark.dart';
+import 'package:broker/src/presentation/theme/light.dart';
 import 'package:broker/translations.dart';
-import 'package:broker/utils/string.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'controller/themeController.dart';
-import 'helper/get_di.dart' as di;
-import 'helper/route_helper.dart';
-import 'theme/dark.dart';
-import 'theme/light.dart';
+import 'package:broker/src/presentation/helper/get_di.dart' as di;
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,7 +34,6 @@ class MyApp extends StatelessWidget {
             getPages: RouteHelper.routes,
             defaultTransition: Transition.rightToLeft,
             transitionDuration: const Duration(milliseconds: 500),
-
             onInit: themeController.changeInitLanguage,
             translations: MyTranslations(),
             locale: Locale('en', 'US'),

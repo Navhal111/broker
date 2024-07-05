@@ -1,27 +1,18 @@
-import 'package:get/get_connect/http/src/response/response.dart';
+import 'package:dio/dio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../api/api_client.dart';
+import '../../data/network/api_client.dart';
 
 
-class CommonRepo{
+class AuthRepo{
   late SharedPreferences sharedPreferences;
   final ApiClient apiClient;
 
-  CommonRepo({required this.apiClient, required this.sharedPreferences});
+  AuthRepo({required this.apiClient, required this.sharedPreferences});
 
-
-
-  Future<Response> postDataSet({required Map<String, dynamic> sendData, required String apiName}) async {
-    return await apiClient.postData(apiName, sendData);
-  }
-
-  Future<Response> getDates({required String apiName}) async {
+  Future<Response?> getDates({required String apiName}) async {
     return await apiClient.getData(apiName);
   }
-
-
-
 
 
   String getUserData(String Keys) {

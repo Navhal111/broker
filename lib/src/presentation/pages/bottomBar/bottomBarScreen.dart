@@ -1,9 +1,8 @@
+import 'package:broker/src/domain/entity/utils/image.dart';
+import 'package:broker/src/domain/entity/utils/style.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../../utils/image.dart';
-import '../../../utils/style.dart';
-import 'homeScreen.dart';
+import '../home/homeScreen.dart';
 
 class BottomBarScreen extends StatefulWidget {
   const BottomBarScreen({super.key});
@@ -15,8 +14,8 @@ class BottomBarScreen extends StatefulWidget {
 class _BottomBarScreenState extends State<BottomBarScreen> with SingleTickerProviderStateMixin {
 
   int _selectedIndex = 0;
-  static List<Widget> _bodyView = <Widget>[
-    HomeScreen(),
+  static final List<Widget> _bodyView = <Widget>[
+    const HomeScreen(),
     Text('comingSoon'.tr, style: poppinsSemiBold.copyWith(fontSize: 20)),
     Text('comingSoon'.tr, style: poppinsSemiBold.copyWith(fontSize: 20)),
     Text('comingSoon'.tr, style: poppinsSemiBold.copyWith(fontSize: 20)),

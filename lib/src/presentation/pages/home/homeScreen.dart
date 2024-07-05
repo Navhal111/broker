@@ -1,10 +1,10 @@
-import 'package:broker/controller/commonController.dart';
+import 'package:broker/src/domain/controller/commonController.dart';
+import 'package:broker/src/domain/entity/utils/image.dart';
+import 'package:broker/src/domain/entity/utils/style.dart';
+import 'package:broker/src/presentation/widgets/filterOption.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../../utils/image.dart';
-import '../../../utils/style.dart';
-import '../home/cardScreen.dart';
+import 'cardScreen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -81,36 +81,21 @@ class HomeScreen extends StatelessWidget {
                                           Expanded(
                                             child: Column(
                                               children: [
-                                                Padding(
-                                                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 6),
-                                                  child: Row(
-                                                    children: [
-                                                      Image.asset(Images.location_flat, height: 20),
-                                                      Text("     ${"currentLocation".tr}", style: poppinsSemiBold.copyWith())
-                                                    ],
-                                                  ),
+                                                FilterOptions(
+                                                  title: "currentLocation".tr,
+                                                  image: Images.location_flat,
                                                 ),
                                                 Divider(color: Colors.grey.shade300),
 
-                                                Padding(
-                                                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 6),
-                                                  child: Row(
-                                                    children: [
-                                                      Image.asset(Images.location_flat, height: 20),
-                                                      Text("     ${"losAngeles".tr}", style: poppinsSemiBold.copyWith())
-                                                    ],
-                                                  ),
+                                                FilterOptions(
+                                                  title: "losAngeles".tr,
+                                                  image: Images.location_flat,
                                                 ),
                                                 Divider(color: Colors.grey.shade300),
 
-                                                Padding(
-                                                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 6),
-                                                  child: Row(
-                                                    children: [
-                                                      Image.asset(Images.location_flat, height: 20),
-                                                      Text("     ${"sanFrancisco".tr}", style: poppinsSemiBold.copyWith())
-                                                    ],
-                                                  ),
+                                                FilterOptions(
+                                                  title: "sanFrancisco".tr,
+                                                  image: Images.location_flat,
                                                 ),
                                                 Divider(color: Colors.grey.shade300),
                                               ],

@@ -1,10 +1,5 @@
-
-
-
+import 'package:broker/src/domain/repository/common_repo.dart';
 import 'package:get/get.dart';
-
-import '../repo/common_repo.dart';
-import '../utils/image.dart';
 
 class CommonController extends GetxController implements GetxService {
   final CommonRepo commonRepo;
